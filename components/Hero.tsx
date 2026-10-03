@@ -24,14 +24,14 @@ export default function Hero() {
             </p>
 
             <p className="mt-4 text-base text-slate-600 leading-relaxed max-w-2xl">
-              A specialized clothing business focused on ladies&apos; bottom wear products. Explore our product showcase for Leggings, Palazzo Pants, and Patiala Pants, or contact us directly for business enquiries.
+              A specialized clothing manufacturer focused on bottom wear and quality loungewear. Explore our product showcase for 4-Way Leggings, Palazzo Pants, Patiala Pants, Shimmer Leggings, Ladies Pajama Sets, and Kids Coord Sets.
             </p>
 
             {/* Key Verified Business Highlights */}
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-xl">
               <div className="flex items-center gap-2 bg-white px-3 py-2 border border-slate-200 rounded">
                 <CheckCircle2 className="w-4 h-4 text-slate-700 shrink-0" />
-                <span className="text-xs font-medium text-slate-800">3 Product Categories</span>
+                <span className="text-xs font-medium text-slate-800">6 Product Collections</span>
               </div>
               <div className="flex items-center gap-2 bg-white px-3 py-2 border border-slate-200 rounded">
                 <Factory className="w-4 h-4 text-slate-700 shrink-0" />

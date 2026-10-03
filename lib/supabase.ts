@@ -37,7 +37,7 @@ interface DbProductRow {
   id: string;
   name: string;
   slug: string;
-  category: 'Leggings' | 'Palazzo Pants' | 'Patiala Pants';
+  category: string;
   description: string;
   main_image: string;
   active: boolean;
@@ -49,7 +49,7 @@ interface DbGalleryRow {
   id: string;
   image_url: string;
   title: string;
-  category: 'All' | 'Leggings' | 'Palazzo Pants' | 'Patiala Pants' | 'Manufacturing & Fabric';
+  category: string;
   alt_text: string;
   sort_order: number;
 }
@@ -100,7 +100,7 @@ export async function getProducts(): Promise<Product[]> {
     const rows = data as unknown as DbProductRow[];
 
     // Map DB snake_case to frontend camelCase
-    return rows.map((item) => ({
+    const dbProducts = rows.map((item) => ({
       id: item.id,
       name: item.name,
       slug: item.slug,
@@ -123,6 +123,23 @@ export async function getProducts(): Promise<Product[]> {
         sortOrder: img.sort_order,
       })),
     }));
+
+    // Merge: ensure all local products (with their updated images & swatches) are fully included
+    const merged = PRODUCTS.map((local) => {
+      const dbMatch = dbProducts.find((p) => p.slug === local.slug || p.id === local.id);
+      if (!dbMatch) return local;
+      return {
+        ...local,
+        description: dbMatch.description || local.description,
+        active: dbMatch.active !== undefined ? dbMatch.active : local.active,
+      };
+    });
+
+    // Also include any extra products created directly in Supabase that are not in local PRODUCTS
+    const localSlugs = new Set(PRODUCTS.map((p) => p.slug));
+    const extraDbProducts = dbProducts.filter((p) => !localSlugs.has(p.slug));
+
+    return [...merged, ...extraDbProducts];
   } catch {
     return PRODUCTS;
   }
@@ -157,7 +174,7 @@ export async function getGalleryItems(): Promise<GalleryItem[]> {
 
     const rows = data as unknown as DbGalleryRow[];
 
-    return rows.map((g) => ({
+    const dbItems = rows.map((g) => ({
       id: g.id,
       imageUrl: g.image_url,
       title: g.title,
@@ -165,6 +182,12 @@ export async function getGalleryItems(): Promise<GalleryItem[]> {
       altText: g.alt_text,
       sortOrder: g.sort_order,
     }));
+
+    // Include local gallery items not in DB
+    const dbImages = new Set(dbItems.map((i) => i.imageUrl));
+    const extraLocal = GALLERY_ITEMS.filter((i) => !dbImages.has(i.imageUrl));
+
+    return [...dbItems, ...extraLocal];
   } catch {
     return GALLERY_ITEMS;
   }

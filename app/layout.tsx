@@ -15,16 +15,19 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://sri-lakshmi-tex.vercel.app'),
-  title: "SRI LAKSHMI TEX | Ladies Bottom Wear Manufacturer & Supplier",
-  description: "SRI LAKSHMI TEX is a clothing business specializing in ladies' bottom wear products: Leggings, Palazzo Pants, and Patiala Pants. Product showcase and business enquiry portal.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.srilakshmitextup.in'),
+  title: "SRI LAKSHMI TEX | Garment & Bottom Wear Manufacturer & Supplier",
+  description: "SRI LAKSHMI TEX is a textile manufacturer in Tirupur specializing in 4-Way Leggings, Palazzo Pants, Patiala Pants, Shimmer Leggings, Ladies Pajama Sets, and Kids Coord Sets.",
   keywords: [
     "SRI LAKSHMI TEX",
     "Ladies Bottom Wear Manufacturer",
     "Leggings Supplier",
     "Palazzo Pants",
     "Patiala Pants",
-    "Ladies Bottom Wear Bulk Enquiry",
+    "Shimmer Leggings",
+    "Ladies Pajama Set",
+    "Kids Coord Set",
+    "Tirupur Garments Wholesale",
   ],
   authors: [{ name: "SRI LAKSHMI TEX" }],
   creator: "SRI LAKSHMI TEX",
@@ -36,9 +39,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://sri-lakshmi-tex.vercel.app",
-    title: "SRI LAKSHMI TEX | Ladies Bottom Wear Manufacturer & Supplier",
-    description: "Specialized manufacturer and supplier of ladies' bottom wear products: Leggings, Palazzo Pants, and Patiala Pants.",
+    url: "https://www.srilakshmitextup.in",
+    title: "SRI LAKSHMI TEX | Garment & Bottom Wear Manufacturer & Supplier",
+    description: "Specialized manufacturer and supplier of premium bottom wear and loungewear: 4-Way Leggings, Palazzo Pants, Patiala Pants, Shimmer Leggings, Pajama Sets, and Kids Coord Sets.",
     siteName: "SRI LAKSHMI TEX",
     images: [
       {
@@ -51,8 +54,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SRI LAKSHMI TEX | Ladies Bottom Wear Manufacturer & Supplier",
-    description: "Specialized manufacturer and supplier of ladies' bottom wear: Leggings, Palazzo Pants, and Patiala Pants.",
+    title: "SRI LAKSHMI TEX | Garment & Bottom Wear Manufacturer & Supplier",
+    description: "Specialized manufacturer and supplier of quality garments: Leggings, Palazzo Pants, Patiala Pants, Shimmer Leggings, Pajama Sets, and Kids Coord Sets.",
     images: ["/logo/company-logo.png"],
   },
 };

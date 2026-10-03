@@ -21,6 +21,9 @@ export default function PhotoGallery({ items }: PhotoGalleryProps) {
     'Leggings',
     'Palazzo Pants',
     'Patiala Pants',
+    'Shimmer Leggings',
+    'Pajama Sets',
+    'Kids Wear',
     'Manufacturing & Fabric',
   ];
 

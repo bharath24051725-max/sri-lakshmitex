@@ -25,10 +25,10 @@ export default function Footer() {
                 </span>
               </div>
               <p className="mt-2 text-xs font-medium uppercase tracking-wider text-slate-400">
-                Ladies Bottom Wear Manufacturer &amp; Supplier
+                Garment &amp; Bottom Wear Manufacturer &amp; Supplier
               </p>
               <p className="mt-4 text-xs text-slate-400 leading-relaxed max-w-sm">
-                Manufacturer and supplier specializing in ladies&apos; bottom wear: Leggings, Palazzo Pants, and Patiala Pants.
+                Manufacturer and supplier specializing in premium bottom wear and loungewear: Leggings, Palazzo Pants, Patiala Pants, Shimmer Leggings, Ladies Pajama Sets, and Kids Coord Sets.
               </p>
             </div>
             <div className="mt-6 text-xs text-slate-500">

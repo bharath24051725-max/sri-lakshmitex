@@ -33,8 +33,8 @@ export default function ProductSection({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           badge="Product Line"
-          title="Ladies' Bottom Wear Collection"
-          subtitle="Explore our three confirmed product categories: Leggings, Palazzo Pants, and Patiala Pants. Detailed specifications and shade options provided upon business enquiry."
+          title="Garment & Bottom Wear Collection"
+          subtitle="Explore our comprehensive collection: 4 Way Golden Angel Leggings, Palazzo Pants, Patiala Pants, Shimmer Ankle Leggings, Ladies Pajama Sets, and Kids Coord Sets. Detailed specifications and shade options provided upon business enquiry."
         />
 
         {/* 3 cards per row on desktop, 2 on tablet, 1 on mobile */}

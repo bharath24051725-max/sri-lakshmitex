@@ -41,17 +41,17 @@ export default function AboutSection() {
 
             <div className="mt-4 space-y-3 text-slate-600 leading-relaxed text-sm sm:text-base">
               <p>
-                <strong>SRI LAKSHMI TEX</strong> is a specialized textile manufacturing and supply enterprise dedicated exclusively to ladies&apos; bottom wear garments. Our operational focus is centered on three core product lines: <strong>Leggings, Palazzo Pants, and Patiala Pants</strong>.
+                <strong>SRI LAKSHMI TEX</strong> is a specialized textile manufacturing and supply enterprise dedicated to high quality bottom wear and loungewear garments. Our production portfolio includes <strong>4-Way Leggings, Palazzo Pants, Patiala Pants, Shimmer Ankle Leggings, Ladies Pajama Sets, and Kids Coord Sets</strong>.
               </p>
 
               <div className="p-4 bg-white border border-slate-200 rounded-md">
                 <p className="text-sm text-slate-800 leading-relaxed">
-                  SRI LAKSHMI TEX is a manufacturer and wholesale supplier of ladies&apos; bottom wear, offering Leggings, Palazzo Pants and Patiala Pants based in Tirupur.
+                  SRI LAKSHMI TEX is a manufacturer and wholesale supplier based in Tirupur, offering premium bottom wear and loungewear collections with verified factory quality standards.
                 </p>
               </div>
 
               <p>
-                We accept wholesale orders and business enquiries for our three dedicated ladies&apos; bottom wear product lines: Leggings, Palazzo Pants, and Patiala Pants.
+                We accept wholesale orders and bulk commercial enquiries across all our product collections with extensive colour shade cards and custom bulk specifications.
               </p>
             </div>
 

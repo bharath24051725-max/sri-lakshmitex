@@ -5,8 +5,8 @@ import { Package, MessageSquareCheck, CheckCircle2 } from 'lucide-react';
 export default function ServicesSection() {
   const confirmedProducts = [
     {
-      name: 'Leggings',
-      detail: 'Ladies bottom wear product category.',
+      name: '4 Way Leggings',
+      detail: 'Ladies 4-way stretch bottom wear product category.',
     },
     {
       name: 'Palazzo Pants',
@@ -15,6 +15,18 @@ export default function ServicesSection() {
     {
       name: 'Patiala Pants',
       detail: 'Ladies pleated bottom wear product category.',
+    },
+    {
+      name: 'Shimmer Leggings',
+      detail: 'Ankle-length shimmer festive bottom wear category.',
+    },
+    {
+      name: 'Ladies Pajama Sets',
+      detail: 'Printed soft-knit cotton loungewear sets.',
+    },
+    {
+      name: 'Kids Coord Sets',
+      detail: 'Printed cotton kids coord loungewear sets.',
     },
   ];
 

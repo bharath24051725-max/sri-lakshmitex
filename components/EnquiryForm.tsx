@@ -9,11 +9,14 @@ interface EnquiryFormProps {
   initialProduct?: string;
 }
 
-function resolveInitialProduct(productName?: string): EnquiryFormData['productInterestedIn'] {
+function resolveInitialProduct(productName?: string): string {
   if (!productName) return 'General Enquiry';
-  if (productName.includes('Leggings')) return 'Leggings';
-  if (productName.includes('Palazzo')) return 'Palazzo Pants';
-  if (productName.includes('Patiala')) return 'Patiala Pants';
+  if (productName.includes('Shimmer')) return 'Shimmer Ankle Leggings';
+  if (productName.includes('Legging')) return '4 Way Golden Angel Legging';
+  if (productName.includes('Palazzo')) return 'Ladies Palazzo Pants';
+  if (productName.includes('Patiala')) return 'Ladies Patiala Pants';
+  if (productName.includes('Pajama')) return 'Ladies Pajama Set';
+  if (productName.includes('Kids') || productName.includes('Coord')) return 'Kids Coord Set';
   return 'General Enquiry';
 }
 
@@ -244,9 +247,12 @@ export default function EnquiryForm({ initialProduct }: EnquiryFormProps) {
             }
             className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded text-slate-900 focus:outline-hidden focus:ring-1 focus:ring-slate-900 focus:border-slate-900"
           >
-            <option value="Leggings">Leggings</option>
-            <option value="Palazzo Pants">Palazzo Pants</option>
-            <option value="Patiala Pants">Patiala Pants</option>
+            <option value="4 Way Golden Angel Legging">4 Way Golden Angel Legging</option>
+            <option value="Ladies Palazzo Pants">Ladies Palazzo Pants</option>
+            <option value="Ladies Patiala Pants">Ladies Patiala Pants</option>
+            <option value="Shimmer Ankle Leggings">Shimmer Ankle Leggings</option>
+            <option value="Ladies Pajama Set">Ladies Pajama Set</option>
+            <option value="Kids Coord Set">Kids Coord Set</option>
             <option value="General Enquiry">General Enquiry / Multiple Products</option>
           </select>
         </div>

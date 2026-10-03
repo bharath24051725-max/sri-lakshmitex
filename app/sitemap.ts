@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { PRODUCTS } from '@/data/products';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://sri-lakshmi-tex.vercel.app';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.srilakshmitextup.in';
   const currentDate = new Date();
 
   const productUrls = PRODUCTS.map((product) => ({

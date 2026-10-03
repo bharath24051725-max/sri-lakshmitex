@@ -16,11 +16,19 @@ export interface ProductImage {
   createdAt?: string;
 }
 
+export type ProductCategory =
+  | 'Leggings'
+  | 'Palazzo Pants'
+  | 'Patiala Pants'
+  | 'Shimmer Leggings'
+  | 'Pajama Sets'
+  | 'Kids Wear';
+
 export interface Product {
   id: string;
   name: string;
   slug: string;
-  category: 'Leggings' | 'Palazzo Pants' | 'Patiala Pants';
+  category: ProductCategory | string;
   description: string;
   mainImage: string;
   active: boolean;
@@ -34,7 +42,7 @@ export interface GalleryItem {
   id: string;
   imageUrl: string;
   title: string;
-  category: 'All' | 'Leggings' | 'Palazzo Pants' | 'Patiala Pants' | 'Manufacturing & Fabric';
+  category: 'All' | ProductCategory | 'Manufacturing & Fabric' | string;
   altText: string;
   sortOrder: number;
   createdAt?: string;
@@ -45,7 +53,7 @@ export interface EnquiryFormData {
   companyName?: string;
   phoneNumber: string;
   email?: string;
-  productInterestedIn: 'Leggings' | 'Palazzo Pants' | 'Patiala Pants' | 'General Enquiry';
+  productInterestedIn: string;
   message: string;
 }
 
