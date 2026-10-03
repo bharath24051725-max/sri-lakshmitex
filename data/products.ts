@@ -1,0 +1,301 @@
+import { Product, GalleryItem } from '@/types/product';
+
+/**
+ * SRI LAKSHMI TEX — Verified Product Catalogue Data
+ * 
+ * STRICT COMPLIANCE NOTE:
+ * - Product categories are strictly the 3 confirmed categories: Leggings, Palazzo Pants, Patiala Pants
+ * - Official photographs integrated for all 3 categories
+ * - Color swatches below represent structural placeholders that client will update with their exact color shade card
+ */
+
+export const PRODUCTS: Product[] = [
+  {
+    id: 'prod-leggings',
+    name: 'Ladies Leggings',
+    slug: 'leggings',
+    category: 'Leggings',
+    description: "Ladies' bottom wear leggings product line. Detailed specifications, fabric parameters, and color shade cards to be provided upon business enquiry.",
+    mainImage: '/products/leggings.jpg',
+    active: true,
+    colors: [
+      {
+        id: 'leg-c1',
+        productId: 'prod-leggings',
+        colorName: 'Jet Black (Placeholder)',
+        colorCode: '#111827',
+        imageUrl: '/products/leggings.jpg',
+      },
+      {
+        id: 'leg-c2',
+        productId: 'prod-leggings',
+        colorName: 'Deep Maroon (Placeholder)',
+        colorCode: '#831843',
+        imageUrl: '/products/leggings.jpg',
+      },
+      {
+        id: 'leg-c3',
+        productId: 'prod-leggings',
+        colorName: 'Navy Blue (Placeholder)',
+        colorCode: '#1E3A8A',
+        imageUrl: '/products/leggings.jpg',
+      },
+      {
+        id: 'leg-c4',
+        productId: 'prod-leggings',
+        colorName: 'Off White (Placeholder)',
+        colorCode: '#F1F5F9',
+        imageUrl: '/products/leggings.jpg',
+      },
+      {
+        id: 'leg-c5',
+        productId: 'prod-leggings',
+        colorName: 'Churidar Red (Placeholder)',
+        colorCode: '#991B1B',
+        imageUrl: '/products/leggings.jpg',
+      },
+      {
+        id: 'leg-c6',
+        productId: 'prod-leggings',
+        colorName: 'Bottle Green (Placeholder)',
+        colorCode: '#064E3B',
+        imageUrl: '/products/leggings.jpg',
+      },
+    ],
+    additionalImages: [
+      {
+        id: 'leg-img-1',
+        productId: 'prod-leggings',
+        imageUrl: '/products/leggings.jpg',
+        altText: 'Official ladies leggings product photograph',
+        sortOrder: 1,
+      },
+      {
+        id: 'leg-img-2',
+        productId: 'prod-leggings',
+        imageUrl: '/gallery/waistband-details.png',
+        altText: 'Waistband construction detail',
+        sortOrder: 2,
+      },
+      {
+        id: 'leg-img-3',
+        productId: 'prod-leggings',
+        imageUrl: '/gallery/fabric-details.png',
+        altText: 'Fabric and material detail',
+        sortOrder: 3,
+      },
+      {
+        id: 'leg-img-4',
+        productId: 'prod-leggings',
+        imageUrl: '/gallery/color-palette.jpeg',
+        altText: 'Available colour shades palette',
+        sortOrder: 4,
+      },
+    ],
+  },
+  {
+    id: 'prod-palazzo',
+    name: 'Ladies Palazzo Pants',
+    slug: 'palazzo-pants',
+    category: 'Palazzo Pants',
+    description: "Ladies' wide-leg palazzo pants product line. Detailed specifications, dimensions, and color shade cards to be provided upon business enquiry.",
+    mainImage: '/products/palazzo-pants.jpg',
+    active: true,
+    colors: [
+      {
+        id: 'pal-c1',
+        productId: 'prod-palazzo',
+        colorName: 'Classic Black (Placeholder)',
+        colorCode: '#18181B',
+        imageUrl: '/products/palazzo-pants.jpg',
+      },
+      {
+        id: 'pal-c2',
+        productId: 'prod-palazzo',
+        colorName: 'Royal Navy (Placeholder)',
+        colorCode: '#172554',
+        imageUrl: '/products/palazzo-pants.jpg',
+      },
+      {
+        id: 'pal-c3',
+        productId: 'prod-palazzo',
+        colorName: 'Cream Ivory (Placeholder)',
+        colorCode: '#F8FAFC',
+        imageUrl: '/products/palazzo-pants.jpg',
+      },
+      {
+        id: 'pal-c4',
+        productId: 'prod-palazzo',
+        colorName: 'Wine Berry (Placeholder)',
+        colorCode: '#701A75',
+        imageUrl: '/products/palazzo-pants.jpg',
+      },
+      {
+        id: 'pal-c5',
+        productId: 'prod-palazzo',
+        colorName: 'Olive Green (Placeholder)',
+        colorCode: '#365314',
+        imageUrl: '/products/palazzo-pants.jpg',
+      },
+    ],
+    additionalImages: [
+      {
+        id: 'pal-img-1',
+        productId: 'prod-palazzo',
+        imageUrl: '/products/palazzo-pants.jpg',
+        altText: 'Official ladies palazzo pants product photograph',
+        sortOrder: 1,
+      },
+      {
+        id: 'pal-img-2',
+        productId: 'prod-palazzo',
+        imageUrl: '/gallery/fabric-details.png',
+        altText: 'Palazzo pants fabric detail',
+        sortOrder: 2,
+      },
+      {
+        id: 'pal-img-3',
+        productId: 'prod-palazzo',
+        imageUrl: '/gallery/color-palette.jpeg',
+        altText: 'Available colour shades palette',
+        sortOrder: 3,
+      },
+    ],
+  },
+  {
+    id: 'prod-patiala',
+    name: 'Ladies Patiala Pants',
+    slug: 'patiala-pants',
+    category: 'Patiala Pants',
+    description: "Ladies' pleated patiala pants product line. Detailed specifications, pleat design, and color shade cards to be provided upon business enquiry.",
+    mainImage: '/products/patiala-pants.jpg',
+    active: true,
+    colors: [
+      {
+        id: 'pat-c1',
+        productId: 'prod-patiala',
+        colorName: 'Deep Black (Placeholder)',
+        colorCode: '#09090B',
+        imageUrl: '/products/patiala-pants.jpg',
+      },
+      {
+        id: 'pat-c2',
+        productId: 'prod-patiala',
+        colorName: 'Crimson Red (Placeholder)',
+        colorCode: '#B91C1C',
+        imageUrl: '/products/patiala-pants.jpg',
+      },
+      {
+        id: 'pat-c3',
+        productId: 'prod-patiala',
+        colorName: 'Golden Mustard (Placeholder)',
+        colorCode: '#CA8A04',
+        imageUrl: '/products/patiala-pants.jpg',
+      },
+      {
+        id: 'pat-c4',
+        productId: 'prod-patiala',
+        colorName: 'Emerald Green (Placeholder)',
+        colorCode: '#047857',
+        imageUrl: '/products/patiala-pants.jpg',
+      },
+      {
+        id: 'pat-c5',
+        productId: 'prod-patiala',
+        colorName: 'Royal Blue (Placeholder)',
+        colorCode: '#1D4ED8',
+        imageUrl: '/products/patiala-pants.jpg',
+      },
+    ],
+    additionalImages: [
+      {
+        id: 'pat-img-1',
+        productId: 'prod-patiala',
+        imageUrl: '/products/patiala-pants.jpg',
+        altText: 'Official ladies patiala pants product photograph',
+        sortOrder: 1,
+      },
+      {
+        id: 'pat-img-2',
+        productId: 'prod-patiala',
+        imageUrl: '/gallery/waistband-details.png',
+        altText: 'Patiala waistband construction detail',
+        sortOrder: 2,
+      },
+      {
+        id: 'pat-img-3',
+        productId: 'prod-patiala',
+        imageUrl: '/gallery/color-palette.jpeg',
+        altText: 'Available colour shades palette',
+        sortOrder: 3,
+      },
+    ],
+  },
+];
+
+export const GALLERY_ITEMS: GalleryItem[] = [
+  {
+    id: 'gal-1',
+    imageUrl: '/products/leggings.jpg',
+    title: 'Ladies Leggings',
+    category: 'Leggings',
+    altText: 'Official ladies leggings product photograph',
+    sortOrder: 1,
+  },
+  {
+    id: 'gal-2',
+    imageUrl: '/products/palazzo-pants.jpg',
+    title: 'Ladies Palazzo Pants',
+    category: 'Palazzo Pants',
+    altText: 'Official ladies palazzo pants product photograph',
+    sortOrder: 2,
+  },
+  {
+    id: 'gal-3',
+    imageUrl: '/products/patiala-pants.jpg',
+    title: 'Ladies Patiala Pants',
+    category: 'Patiala Pants',
+    altText: 'Official ladies patiala pants product photograph',
+    sortOrder: 3,
+  },
+  {
+    id: 'gal-4',
+    imageUrl: '/gallery/fabric-details.png',
+    title: 'Fabric & Material Details',
+    category: 'Manufacturing & Fabric',
+    altText: 'SRI LAKSHMI TEX fabric and material details',
+    sortOrder: 4,
+  },
+  {
+    id: 'gal-5',
+    imageUrl: '/gallery/waistband-details.png',
+    title: 'Waistband Construction Detail',
+    category: 'Manufacturing & Fabric',
+    altText: 'SRI LAKSHMI TEX waistband and material construction detail',
+    sortOrder: 5,
+  },
+  {
+    id: 'gal-6',
+    imageUrl: '/gallery/packaging-details.png',
+    title: 'Packaging & Inspection',
+    category: 'Manufacturing & Fabric',
+    altText: 'SRI LAKSHMI TEX garment packaging and inspection process',
+    sortOrder: 6,
+  },
+  {
+    id: 'gal-7',
+    imageUrl: '/gallery/facility-production.jpeg',
+    title: 'Facility & Production',
+    category: 'Manufacturing & Fabric',
+    altText: 'SRI LAKSHMI TEX manufacturing facility in Tirupur',
+    sortOrder: 7,
+  },
+  {
+    id: 'gal-8',
+    imageUrl: '/gallery/color-palette.jpeg',
+    title: 'Available Colour Shades',
+    category: 'Manufacturing & Fabric',
+    altText: 'SRI LAKSHMI TEX available colour shades palette',
+    sortOrder: 8,
+  },
+];
