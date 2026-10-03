@@ -1,13 +1,69 @@
-import { Product, GalleryItem } from '@/types/product';
+import { Product, GalleryItem, ProductColor } from '@/types/product';
 
 /**
- * SRI LAKSHMI TEX — Verified Product Catalogue Data
- * 
- * STRICT COMPLIANCE NOTE:
- * - Product categories are strictly the 3 confirmed categories: Leggings, Palazzo Pants, Patiala Pants
- * - Official photographs integrated for all 3 categories
- * - Color swatches below represent structural placeholders that client will update with their exact color shade card
+ * SRI LAKSHMI TEX — Official 48-Colour Palette Definition
+ * Verified from commercial shade card chart (001 - 048)
  */
+export const PALETTE_48_COLORS = [
+  { code: '001', name: 'Golden Yellow', hex: '#F5A623' },
+  { code: '002', name: 'Navy', hex: '#1C4465' },
+  { code: '003', name: 'Red', hex: '#D91A2A' },
+  { code: '004', name: 'Mustard', hex: '#C68A20' },
+  { code: '005', name: 'Black', hex: '#232323' },
+  { code: '006', name: 'P. Green', hex: '#0A8B47' },
+  { code: '007', name: 'Ink Blue', hex: '#1754A8' },
+  { code: '008', name: 'Baby Pink', hex: '#F4A7C1' },
+  { code: '009', name: 'Pink', hex: '#E33582' },
+  { code: '010', name: 'Magenta', hex: '#BF1B75' },
+  { code: '011', name: 'Purple', hex: '#5C2B79' },
+  { code: '012', name: 'White', hex: '#FFFFFF' },
+  { code: '013', name: 'Lemon Yellow', hex: '#FFC82B' },
+  { code: '014', name: 'Reliance Green', hex: '#008D9B' },
+  { code: '015', name: 'L. Skin', hex: '#E3C5A8' },
+  { code: '016', name: 'Bottle Green', hex: '#1A543E' },
+  { code: '017', name: 'Maroon', hex: '#6B2438' },
+  { code: '018', name: 'Mehandi', hex: '#96A329' },
+  { code: '019', name: 'D. Purple', hex: '#462A5E' },
+  { code: '020', name: 'Sky Blue', hex: '#0595C8' },
+  { code: '021', name: 'Coffee', hex: '#6E4437' },
+  { code: '022', name: 'Peacock', hex: '#006E82' },
+  { code: '023', name: 'Honey', hex: '#C84831' },
+  { code: '024', name: 'Olive', hex: '#4A6E3B' },
+  { code: '025', name: 'Orange', hex: '#F25A1E' },
+  { code: '026', name: 'F-Rose', hex: '#DE3D56' },
+  { code: '027', name: 'Half White', hex: '#F8F5E4' },
+  { code: '028', name: 'D. Skin', hex: '#B38354' },
+  { code: '029', name: 'D. Milange', hex: '#54372D' },
+  { code: '030', name: 'Parrot', hex: '#42C727' },
+  { code: '031', name: 'Jerry Red', hex: '#D31434' },
+  { code: '032', name: 'L. Grey', hex: '#82929E' },
+  { code: '033', name: 'Jute', hex: '#B0A08D' },
+  { code: '034', name: 'D. Grey', hex: '#47545D' },
+  { code: '035', name: 'Yellow', hex: '#EDB91A' },
+  { code: '036', name: 'Stone', hex: '#D6B495' },
+  { code: '037', name: 'Red Maroon', hex: '#9B1D28' },
+  { code: '038', name: 'Royal Blue', hex: '#194CB0' },
+  { code: '039', name: 'Grape', hex: '#843E5E' },
+  { code: '040', name: 'Red Orange', hex: '#E8291F' },
+  { code: '041', name: 'Pistar', hex: '#1FB36C' },
+  { code: '042', name: 'Lrz Green', hex: '#0D7B6C' },
+  { code: '043', name: 'Wine', hex: '#672B3D' },
+  { code: '044', name: 'D. Pink', hex: '#D9256E' },
+  { code: '045', name: 'Light Blue', hex: '#95CCE5' },
+  { code: '046', name: 'Peach', hex: '#EB7866' },
+  { code: '047', name: 'White', hex: '#F3F4F6' },
+  { code: '048', name: 'Beige', hex: '#DFD0BD' },
+];
+
+export function getPaletteProductColors(productId: string, imageUrl: string): ProductColor[] {
+  return PALETTE_48_COLORS.map((c) => ({
+    id: `${productId}-c-${c.code}`,
+    productId: productId,
+    colorName: `${c.code} | ${c.name}`,
+    colorCode: c.hex,
+    imageUrl: imageUrl,
+  }));
+}
 
 export const PRODUCTS: Product[] = [
   {
@@ -15,46 +71,10 @@ export const PRODUCTS: Product[] = [
     name: '4 Way Golden Angel Legging',
     slug: 'leggings',
     category: 'Leggings',
-    description: "Premium 4-way stretch golden angel ladies leggings engineered for supreme flexibility, softness, and contour fit. Tailored with high-grade elastane combed cotton knit.",
+    description: "Premium 4-way stretch golden angel ladies leggings engineered for supreme flexibility, softness, and contour fit. Tailored with high-grade elastane combed cotton knit in all 48 commercial palette shades.",
     mainImage: '/products/leggings.jpg',
     active: true,
-    colors: [
-      {
-        id: 'leg-c1',
-        productId: 'prod-leggings',
-        colorName: 'Matte Pink',
-        colorCode: '#B3586D',
-        imageUrl: '/products/leggings.jpg',
-      },
-      {
-        id: 'leg-c2',
-        productId: 'prod-leggings',
-        colorName: 'Beige',
-        colorCode: '#D3BCA2',
-        imageUrl: '/products/leggings.jpg',
-      },
-      {
-        id: 'leg-c3',
-        productId: 'prod-leggings',
-        colorName: 'Turquoise',
-        colorCode: '#087994',
-        imageUrl: '/products/leggings.jpg',
-      },
-      {
-        id: 'leg-c4',
-        productId: 'prod-leggings',
-        colorName: 'Fuchsia',
-        colorCode: '#AB084E',
-        imageUrl: '/products/leggings.jpg',
-      },
-      {
-        id: 'leg-c5',
-        productId: 'prod-leggings',
-        colorName: 'Black',
-        colorCode: '#18181B',
-        imageUrl: '/products/leggings.jpg',
-      },
-    ],
+    colors: getPaletteProductColors('prod-leggings', '/products/leggings.jpg'),
     additionalImages: [
       {
         id: 'leg-img-1',
@@ -91,46 +111,10 @@ export const PRODUCTS: Product[] = [
     name: 'Ladies Palazzo Pants',
     slug: 'palazzo-pants',
     category: 'Palazzo Pants',
-    description: "Ladies' wide-leg palazzo pants crafted with breathable drape and premium fabric finish for effortless casual and ethnic styling.",
+    description: "Ladies' wide-leg palazzo pants crafted with breathable drape and premium fabric finish for effortless casual and ethnic styling. Manufactured across all 48 commercial palette shades.",
     mainImage: '/products/palazzo-pants.jpg',
     active: true,
-    colors: [
-      {
-        id: 'pal-c1',
-        productId: 'prod-palazzo',
-        colorName: 'Classic Black',
-        colorCode: '#18181B',
-        imageUrl: '/products/palazzo-pants.jpg',
-      },
-      {
-        id: 'pal-c2',
-        productId: 'prod-palazzo',
-        colorName: 'Royal Navy',
-        colorCode: '#172554',
-        imageUrl: '/products/palazzo-pants.jpg',
-      },
-      {
-        id: 'pal-c3',
-        productId: 'prod-palazzo',
-        colorName: 'Cream Ivory',
-        colorCode: '#F8FAFC',
-        imageUrl: '/products/palazzo-pants.jpg',
-      },
-      {
-        id: 'pal-c4',
-        productId: 'prod-palazzo',
-        colorName: 'Wine Berry',
-        colorCode: '#701A75',
-        imageUrl: '/products/palazzo-pants.jpg',
-      },
-      {
-        id: 'pal-c5',
-        productId: 'prod-palazzo',
-        colorName: 'Olive Green',
-        colorCode: '#365314',
-        imageUrl: '/products/palazzo-pants.jpg',
-      },
-    ],
+    colors: getPaletteProductColors('prod-palazzo', '/products/palazzo-pants.jpg'),
     additionalImages: [
       {
         id: 'pal-img-1',
@@ -160,46 +144,10 @@ export const PRODUCTS: Product[] = [
     name: 'Ladies Patiala Pants',
     slug: 'patiala-pants',
     category: 'Patiala Pants',
-    description: "Traditional pleated ladies patiala pants featuring rich gathers, relaxed comfortable fit, and breathable cotton fabric.",
+    description: "Traditional pleated ladies patiala pants featuring rich gathers, relaxed comfortable fit, and breathable cotton fabric. Available in all 48 vibrant commercial palette shades.",
     mainImage: '/products/patiala-pants.jpg',
     active: true,
-    colors: [
-      {
-        id: 'pat-c1',
-        productId: 'prod-patiala',
-        colorName: 'Blue',
-        colorCode: '#1B65C4',
-        imageUrl: '/products/patiala-pants.jpg',
-      },
-      {
-        id: 'pat-c2',
-        productId: 'prod-patiala',
-        colorName: 'Beige',
-        colorCode: '#DDC5A2',
-        imageUrl: '/products/patiala-pants.jpg',
-      },
-      {
-        id: 'pat-c3',
-        productId: 'prod-patiala',
-        colorName: 'Black',
-        colorCode: '#18181B',
-        imageUrl: '/products/patiala-pants.jpg',
-      },
-      {
-        id: 'pat-c4',
-        productId: 'prod-patiala',
-        colorName: 'Fuchsia',
-        colorCode: '#C4166E',
-        imageUrl: '/products/patiala-pants.jpg',
-      },
-      {
-        id: 'pat-c5',
-        productId: 'prod-patiala',
-        colorName: 'Turquoise',
-        colorCode: '#0E859E',
-        imageUrl: '/products/patiala-pants.jpg',
-      },
-    ],
+    colors: getPaletteProductColors('prod-patiala', '/products/patiala-pants.jpg'),
     additionalImages: [
       {
         id: 'pat-img-1',
@@ -229,46 +177,10 @@ export const PRODUCTS: Product[] = [
     name: 'Shimmer Ankle Leggings',
     slug: 'shimmer-ankle-leggings',
     category: 'Shimmer Leggings',
-    description: "Glamorous shimmer finish ankle-length leggings tailored for festive celebrations and evening wear with radiant luster and resilient 4-way stretch.",
+    description: "Glamorous shimmer finish ankle-length leggings tailored for festive celebrations and evening wear with radiant luster, resilient 4-way stretch, and complete 48-shade commercial range.",
     mainImage: '/products/shimmer-leggings.jpg',
     active: true,
-    colors: [
-      {
-        id: 'shim-c1',
-        productId: 'prod-shimmer',
-        colorName: 'Blue',
-        colorCode: '#1A64C2',
-        imageUrl: '/products/shimmer-leggings.jpg',
-      },
-      {
-        id: 'shim-c2',
-        productId: 'prod-shimmer',
-        colorName: 'Beige',
-        colorCode: '#DDC5A2',
-        imageUrl: '/products/shimmer-leggings.jpg',
-      },
-      {
-        id: 'shim-c3',
-        productId: 'prod-shimmer',
-        colorName: 'Black',
-        colorCode: '#18181B',
-        imageUrl: '/products/shimmer-leggings.jpg',
-      },
-      {
-        id: 'shim-c4',
-        productId: 'prod-shimmer',
-        colorName: 'Fuchsia',
-        colorCode: '#C4166E',
-        imageUrl: '/products/shimmer-leggings.jpg',
-      },
-      {
-        id: 'shim-c5',
-        productId: 'prod-shimmer',
-        colorName: 'Turquoise',
-        colorCode: '#0D829B',
-        imageUrl: '/products/shimmer-leggings.jpg',
-      },
-    ],
+    colors: getPaletteProductColors('prod-shimmer', '/products/shimmer-leggings.jpg'),
     additionalImages: [
       {
         id: 'shim-img-1',
