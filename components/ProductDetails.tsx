@@ -72,7 +72,15 @@ export default function ProductDetails({
       {/* Product Imagery Column */}
       <div className="lg:col-span-6 flex flex-col gap-4">
         {/* Main Display Image */}
-        <div className="relative aspect-square w-full bg-white border border-slate-200 rounded overflow-hidden shadow-2xs">
+        <div
+          className={`relative w-full bg-white border border-slate-200 rounded overflow-hidden shadow-2xs transition-all duration-200 ${
+            activeImage.includes('-details')
+              ? 'aspect-[1024/478]'
+              : activeImage.includes('palette')
+              ? 'aspect-3/2'
+              : 'aspect-square'
+          }`}
+        >
           <Image
             src={activeImage}
             alt={`${product.name} detail view`}

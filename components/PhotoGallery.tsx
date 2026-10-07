@@ -71,19 +71,25 @@ export default function PhotoGallery({ items }: PhotoGalleryProps) {
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item) => (
-            <div
-              key={item.id}
-              className="group relative bg-slate-50 border border-slate-200 rounded overflow-hidden flex flex-col hover:border-slate-300 transition-colors shadow-2xs"
-            >
-              <div className="relative aspect-square w-full bg-white overflow-hidden">
-                <Image
-                  src={item.imageUrl}
-                  alt={item.altText}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-contain transition-transform duration-200 group-hover:scale-103"
-                />
+          {filteredItems.map((item) => {
+            const isDetailBanner = item.imageUrl.includes('-details');
+            return (
+              <div
+                key={item.id}
+                className="group relative bg-white border border-slate-200 rounded overflow-hidden flex flex-col hover:border-slate-300 transition-colors shadow-2xs"
+              >
+                <div
+                  className={`relative w-full bg-white overflow-hidden ${
+                    isDetailBanner ? 'aspect-[1024/478]' : 'aspect-square'
+                  }`}
+                >
+                  <Image
+                    src={item.imageUrl}
+                    alt={item.altText}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-contain transition-transform duration-200 group-hover:scale-103"
+                  />
 
                 {/* Accessible Zoom Trigger */}
                 <button
@@ -113,7 +119,8 @@ export default function PhotoGallery({ items }: PhotoGalleryProps) {
                 </span>
               </div>
             </div>
-          ))}
+          );
+        })}
         </div>
 
         {/* Accessible Lightbox Modal */}
