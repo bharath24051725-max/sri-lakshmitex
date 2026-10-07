@@ -76,13 +76,13 @@ export default function PhotoGallery({ items }: PhotoGalleryProps) {
               key={item.id}
               className="group relative bg-slate-50 border border-slate-200 rounded overflow-hidden flex flex-col hover:border-slate-300 transition-colors shadow-2xs"
             >
-              <div className="relative aspect-4/3 w-full bg-slate-100 overflow-hidden">
+              <div className="relative aspect-square w-full bg-white overflow-hidden">
                 <Image
                   src={item.imageUrl}
                   alt={item.altText}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-contain p-3 transition-transform duration-200 group-hover:scale-103"
+                  className="object-contain transition-transform duration-200 group-hover:scale-103"
                 />
 
                 {/* Accessible Zoom Trigger */}

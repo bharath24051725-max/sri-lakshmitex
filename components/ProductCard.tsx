@@ -42,24 +42,29 @@ export default function ProductCard({
   return (
     <div className="flex flex-col bg-white border border-slate-200 rounded-md overflow-hidden hover:border-slate-300 transition-colors shadow-2xs">
       {/* Product Image Area */}
-      <div className="relative aspect-4/5 w-full bg-slate-50 border-b border-slate-200 overflow-hidden">
+      <div className="relative aspect-square w-full bg-white border-b border-slate-200 overflow-hidden">
         <Image
           src={displayImage}
           alt={`${product.name} - SRI LAKSHMI TEX`}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-contain p-4 transition-transform duration-200 hover:scale-102"
+          className="object-contain transition-transform duration-300 hover:scale-102"
         />
-        <div className="absolute top-3 left-3">
-          <span className="inline-block text-[11px] font-semibold uppercase tracking-wider text-slate-700 bg-white/95 px-2.5 py-1 rounded border border-slate-200">
-            {product.category}
-          </span>
-        </div>
       </div>
 
       {/* Card Content Area */}
       <div className="flex-1 p-5 flex flex-col justify-between">
         <div>
+          <div className="flex items-center justify-between gap-2 mb-2.5">
+            <span className="inline-block text-[11px] font-semibold uppercase tracking-wider text-slate-700 bg-slate-100 px-2.5 py-0.5 rounded border border-slate-200">
+              {product.category}
+            </span>
+            {product.composition && (
+              <span className="inline-block text-[11px] font-medium text-slate-600 bg-slate-50 px-2 py-0.5 rounded border border-slate-200">
+                {product.composition}
+              </span>
+            )}
+          </div>
           <h3 className="text-xl font-bold text-slate-900 tracking-tight">
             {product.name}
           </h3>

@@ -130,7 +130,7 @@ export async function getProducts(): Promise<Product[]> {
       if (!dbMatch) return local;
       return {
         ...local,
-        description: dbMatch.description || local.description,
+        description: local.description || dbMatch.description,
         active: dbMatch.active !== undefined ? dbMatch.active : local.active,
       };
     });

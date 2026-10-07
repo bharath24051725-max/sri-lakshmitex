@@ -34,6 +34,9 @@ export interface Product {
   active: boolean;
   colors: ProductColor[];
   additionalImages?: ProductImage[];
+  composition?: string;
+  features?: string[];
+  fit?: string;
   createdAt?: string;
   updatedAt?: string;
 }
