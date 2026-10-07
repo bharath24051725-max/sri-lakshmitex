@@ -247,9 +247,9 @@ export default function EnquiryForm({ initialProduct }: EnquiryFormProps) {
             }
             className="w-full px-3.5 py-2.5 text-sm bg-white border border-slate-300 rounded text-slate-900 focus:outline-hidden focus:ring-1 focus:ring-slate-900 focus:border-slate-900"
           >
-            <option value="Lycra Anklefit Leggings">Lycra Anklefit Leggings</option>
-            <option value="Palazzo Pants with Pockets & Rope">Palazzo Pants with Pockets & Rope</option>
+            <option value="4 Way Golden Legging">4 Way Golden Legging</option>
             <option value="Patiala Pant with Rope">Patiala Pant with Rope</option>
+            <option value="Palazzo Pants with Pockets & Rope">Palazzo Pants with Pockets & Rope</option>
             <option value="Shimmer Ankle Leggings">Shimmer Ankle Leggings</option>
             <option value="Ladies Pyjama Set">Ladies Pyjama Set</option>
             <option value="Kids Coord Set">Kids Coord Set</option>

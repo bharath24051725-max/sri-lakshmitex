@@ -183,11 +183,20 @@ export async function getGalleryItems(): Promise<GalleryItem[]> {
       sortOrder: g.sort_order,
     }));
 
-    // Include local gallery items not in DB
-    const dbImages = new Set(dbItems.map((i) => i.imageUrl));
-    const extraLocal = GALLERY_ITEMS.filter((i) => !dbImages.has(i.imageUrl));
+    // Ensure local verified GALLERY_ITEMS order takes precedence
+    const merged = GALLERY_ITEMS.map((local, idx) => {
+      const match = dbItems.find((d) => d.id === local.id || d.imageUrl === local.imageUrl);
+      return {
+        ...local,
+        title: local.title || match?.title || local.title,
+        sortOrder: idx + 1,
+      };
+    });
 
-    return [...dbItems, ...extraLocal];
+    const localImages = new Set(GALLERY_ITEMS.map((i) => i.imageUrl));
+    const extraDb = dbItems.filter((i) => !localImages.has(i.imageUrl));
+
+    return [...merged, ...extraDb];
   } catch {
     return GALLERY_ITEMS;
   }

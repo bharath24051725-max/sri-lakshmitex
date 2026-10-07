@@ -19,8 +19,8 @@ export default function PhotoGallery({ items }: PhotoGalleryProps) {
   const categories = [
     'All',
     'Leggings',
-    'Palazzo Pants',
     'Patiala Pants',
+    'Palazzo Pants',
     'Shimmer Leggings',
     'Pajama Sets',
     'Kids Wear',
@@ -73,6 +73,9 @@ export default function PhotoGallery({ items }: PhotoGalleryProps) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item) => {
             const isDetailBanner = item.imageUrl.includes('-details');
+            const isPalette = item.imageUrl.includes('color-palette');
+            const isFacility = item.imageUrl.includes('facility');
+
             return (
               <div
                 key={item.id}
@@ -80,7 +83,13 @@ export default function PhotoGallery({ items }: PhotoGalleryProps) {
               >
                 <div
                   className={`relative w-full bg-white overflow-hidden ${
-                    isDetailBanner ? 'aspect-[1024/478]' : 'aspect-square'
+                    isDetailBanner
+                      ? 'aspect-[1024/478]'
+                      : isPalette
+                      ? 'aspect-3/2'
+                      : isFacility
+                      ? 'aspect-4/3'
+                      : 'aspect-square'
                   }`}
                 >
                   <Image

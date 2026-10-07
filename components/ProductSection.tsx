@@ -34,7 +34,7 @@ export default function ProductSection({
         <SectionHeading
           badge="Product Line"
           title="Garment & Bottom Wear Collection"
-          subtitle="Explore our comprehensive collection: Lycra Anklefit Leggings, Palazzo Pants with Pockets & Rope, Patiala Pants with Rope, Shimmer Ankle Leggings, Ladies Pyjama Sets, and Kids Coord Sets. Detailed specifications and shade options provided upon business enquiry."
+          subtitle="Explore our comprehensive collection: 4 Way Golden Leggings, Patiala Pants with Rope, Palazzo Pants with Pockets & Rope, Shimmer Ankle Leggings, Ladies Pyjama Sets, and Kids Coord Sets. Detailed specifications and shade options provided upon business enquiry."
         />
 
         {/* 3 cards per row on desktop, 2 on tablet, 1 on mobile */}
